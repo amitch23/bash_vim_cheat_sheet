@@ -59,8 +59,8 @@ Common commands for bash and vim
  
 ### Navigation in command mode:
  
- |Key/Command|	Description|
-|-----------|	-----------|
+|Key/Command|Description|
+|-----------|-----------|
 |G |move to the end of the file.|
 |gg| move to the beginning of the file.|
 |0 |moves the cursor to the beginning of the line.|

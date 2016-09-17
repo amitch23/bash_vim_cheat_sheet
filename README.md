@@ -1,7 +1,3 @@
-# bash_vim_cheat_sheet
-
-Common commands for bash and vim
-
 ## BASH Know-how 
 
 ### Help
@@ -10,7 +6,7 @@ Common commands for bash and vim
 | [command] -h	|Offers help|
 | info [command]|	offers help|
 | man [command]|	Show help manual|
-| apropos [search-pattern]	|Searches for command with keywords in description|
+| apropos [Search-pattern]	|Searches for command with keywords in description|
 
 ### Line shortcuts
 |Key/Command|	Description|
@@ -25,26 +21,26 @@ Common commands for bash and vim
 ### Search and command history
 |Key/Command	|Description|
 |-----------|	-----------|
-|find [dir] -name [search_pattern]|search for files, e.g. find /Users -name “file.txt”|
-|grep [search_pattern] [file]|	Search for all lines that contain the pattern|
-|history n	 |shows stuff typed with num to limit items|
-|Ctrl + r	|interactive search through past commands|
+|find [dir] -name [Search_pattern]|Search for files, e.g. find /Users -name “file.txt”|
+|grep [Search_pattern] [file]|	Search for all lines that contain the pattern|
+|history n	 |Show stuff typed with num to limit items|
+|Ctrl + r	| Search interactively through past commands|
 |!!|	Execute the last command typed|
 
 ### Chaining Commands
 |Key/Command|	Description|
 |-----------|	-----------|
-|"[command-a];[command-b]"	|Run commands asynchronously|
-|"[command-a] &&|[command-b]"|	Run commands synchronously|
-|[command-a] &| Run command in background|
-|[command-a] | [command-b]|	"Run command then pass result to command B|
+|[command-a] ; [command-b]	|Run commands asynchronously|
+|[command-a] && [command-b]|Run commands synchronously|
+|[command-a]  &| Run command in background|
+|[command-a] \| [command-b]|	Run command then pass result to command B|
 
 
 ### MISC:
 |Key/Command|	Description|
 |-----------|	-----------|
-|cd 	|defaults to go home|
-|cd + -	|Previous directory|
+|cd 	|Change Directory to home|
+|cd + -	|Go to previous directory|
 |pbcopy < [file]	|Copy file contents to clipboard|
 |pbpaste > [file]|	Paste clipboard contents|
 |mkdir -p [dir]/[dir]	|Create nested directories|
@@ -59,18 +55,55 @@ Common commands for bash and vim
  
 ### Navigation in command mode:
  
-|Key/Command|Description|
-|-----------|-----------|
-|G |move to the end of the file.|
-|gg| move to the beginning of the file.|
-|0 |moves the cursor to the beginning of the line.|
-|$ |moves the cursor to the end of the line.|
-|`.| move to the last edit.|
+|Key/Command|	Description|
+|-----------|	-----------|
+|G | Move to the end of the file.|
+|gg| Move to the beginning of the file.|
+|0 |Moves the cursor to the beginning of the line.|
+|$ |Moves the cursor to the end of the line.|
+|`.| Move to the last edit.|
 
-WTF:
--ifconfig?
--network stuff?
--how is command history saved and why is it saved when I open a new session?
--open 1password with keyboard shortcut
+### Editing in command mode:
+
+|Key/Command|	Description|
+|-----------|	-----------|
+|d | Start the delete operation.|
+|dw |Delete a word to the right.|
+|d0 |Delete to the beginning of a line.|
+|d$ |Delete to the end of a line.|
+|dgg |Delete to the beginning of the file.|
+|dG | Delete to the end of the file.|
+|u | Undo the last operation.|
+|Ctrl-r | Redo the last undo.|
 	
-	
+### Search and Replace:
+
+|Key/Command|	Description|
+|-----------|	-----------|
+|/[text]| Search for text in the document, going forward.|
+|n |Move the cursor to the next instance of the text from the last Search. This will wrap to the beginning of the document.|
+|N |Move the cursor to the previous instance of the text from the last Search.|
+|?[text]| Search for text in the document, going backwards.|
+|:%s/text/replacement text/g |Search through the entire document for text and replace it with replacement text.|
+|:%s/text/replacement text/gc |Search through the entire document and confirm before replacing text.|
+
+### Search and Replace:
+In command mode, hit `v` or `V` to highlight by word or line. Select text then...
+
+
+|Key/Command|	Description|
+|-----------|	-----------|
+|y |Yank text into the copy buffer.|
+|p |Paste text after the current line.|
+|P |Paste text on the current line.|
+
+### Miscellaneous 
+
+#### 1Password (Works in browsers with the browser extension installed.)
+
+|Key/Command|	Description|
+|-----------|	-----------|
+|Command‑Backslash (\\)|	Fill Login on current web page.|
+|Option‑Command‑Backslash (\\)	| Show 1Password mini.|
+|Control‑Option‑Command‑L|	Lock 1Password.|
+
